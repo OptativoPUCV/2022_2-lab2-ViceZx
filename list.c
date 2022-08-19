@@ -36,11 +36,8 @@ List * createList() {
 	return list;
 }
 
-void * firstList(List * list, Node * new) {
-  Node * nodo = new;
-  nodo -> next = list -> head;
-  list -> head = nodo;
-    
+void * firstList(List * list) {
+    return NULL;
 }
 
 void * nextList(List * list) {
