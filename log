@@ -437,3 +437,26 @@ list.c:49:26: error: ‘List’ {aka ‘struct List’} has no member named ‘n
       |                          ^~
 Compilation failed
 10d4226
+Fri 19 Aug 2022 03:27:32 PM UTC: 
+ list.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:49:11: error: initialization of ‘int’ from ‘Node *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   49 |   int x = list -> head;
+      |           ^~~~
+list.c:50:11: error: comparison between pointer and integer [-Werror]
+   50 |   while(x != NULL){
+      |           ^~
+list.c:51:11: error: invalid type argument of ‘->’ (have ‘int’)
+   51 |     x = x -> next;
+      |           ^~
+list.c:52:12: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   52 |     return x;
+      |            ^
+list.c:55:1: error: control reaches end of non-void function [-Werror=return-type]
+   55 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+a69e15c
