@@ -59,3 +59,25 @@ list.c:42:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 5110cf2
+Fri 19 Aug 2022 02:35:38 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:40:17: error: implicit declaration of function ‘CreateNode’; did you mean ‘createNode’? [-Werror=implicit-function-declaration]
+   40 |   Node * nodo = CreateNode(Pelicula);
+      |                 ^~~~~~~~~~
+      |                 createNode
+list.c:40:28: error: ‘Pelicula’ undeclared (first use in this function)
+   40 |   Node * nodo = CreateNode(Pelicula);
+      |                            ^~~~~~~~
+list.c:40:28: note: each undeclared identifier is reported only once for each function it appears in
+list.c:40:10: error: unused variable ‘nodo’ [-Werror=unused-variable]
+   40 |   Node * nodo = CreateNode(Pelicula);
+      |          ^~~~
+list.c:42:1: error: control reaches end of non-void function [-Werror=return-type]
+   42 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+4c76047
