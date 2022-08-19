@@ -12,3 +12,13 @@ list.c:34:13: error: ‘List’ {aka ‘struct List’} has no member named ‘s
       |             ^~
 Compilation failed
 ca5ae20
+Fri 19 Aug 2022 02:20:09 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:34:13: error: ‘List’ {aka ‘struct List’} has no member named ‘size’
+   34 |         list->size = 1;
+      |             ^~
+Compilation failed
+5708411
