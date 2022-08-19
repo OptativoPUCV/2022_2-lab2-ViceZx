@@ -38,3 +38,24 @@ Fri 19 Aug 2022 02:23:29 PM UTC:
  tests:  1|5
 total_score: 10/70
 516becd
+Fri 19 Aug 2022 02:35:04 PM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:40:17: error: implicit declaration of function ‘new’ [-Werror=implicit-function-declaration]
+   40 |   Node * nodo = new(Pelicula);
+      |                 ^~~
+list.c:40:21: error: ‘Pelicula’ undeclared (first use in this function)
+   40 |   Node * nodo = new(Pelicula);
+      |                     ^~~~~~~~
+list.c:40:21: note: each undeclared identifier is reported only once for each function it appears in
+list.c:40:10: error: unused variable ‘nodo’ [-Werror=unused-variable]
+   40 |   Node * nodo = new(Pelicula);
+      |          ^~~~
+list.c:42:1: error: control reaches end of non-void function [-Werror=return-type]
+   42 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+5110cf2
