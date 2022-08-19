@@ -299,3 +299,14 @@ list.c:41:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 0ea056d
+Fri 19 Aug 2022 02:58:14 PM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:41:1: error: control reaches end of non-void function [-Werror=return-type]
+   41 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+8e6fd20
