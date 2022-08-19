@@ -226,3 +226,37 @@ list.c:44:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 52be3ec
+Fri 19 Aug 2022 02:45:12 PM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c:39:8: error: conflicting types for ‘firstList’; have ‘void *(List *, Node *)’ {aka ‘void *(struct List *, Node *)’}
+   39 | void * firstList(List * list, Node * new) {
+      |        ^~~~~~~~~
+In file included from list.c:4,
+                 from test.c:5:
+list.h:8:8: note: previous declaration of ‘firstList’ with type ‘void *(List *)’ {aka ‘void *(struct List *)’}
+    8 | void * firstList(List * list);
+      |        ^~~~~~~~~
+test.c: In function ‘test_first_next’:
+test.c:101:13: error: too few arguments to function ‘firstList’
+  101 |     int*j = firstList(L);
+      |             ^~~~~~~~~
+In file included from test.c:5:
+list.c:39:8: note: declared here
+   39 | void * firstList(List * list, Node * new) {
+      |        ^~~~~~~~~
+test.c:122:9: error: too few arguments to function ‘firstList’
+  122 |     j = firstList(L);
+      |         ^~~~~~~~~
+In file included from test.c:5:
+list.c:39:8: note: declared here
+   39 | void * firstList(List * list, Node * new) {
+      |        ^~~~~~~~~
+list.c: In function ‘firstList’:
+list.c:44:1: error: control reaches end of non-void function [-Werror=return-type]
+   44 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+8442109
