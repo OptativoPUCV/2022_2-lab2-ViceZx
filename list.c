@@ -89,7 +89,7 @@ void pushCurrent(List * list, void * data) {
     nodo -> prev = list -> head;
     list -> tail = nodo;
     list -> head -> next = nodo;
-    list -> tail -> prev = nodo;
+    nodo -> next = list -> tail -> next;
     
     
   }
