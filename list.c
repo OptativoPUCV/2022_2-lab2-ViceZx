@@ -37,7 +37,7 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-  Node * nodo = CreateNode(Pelicula);
+  Node * nodo = createNode(Pelicula);
     
 }
 
