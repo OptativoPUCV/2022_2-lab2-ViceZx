@@ -37,7 +37,7 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-  Node * nodo = new;
+  Node * nodo = createNode(void *data);
   nodo -> next = list -> head;
   list -> head = nodo;
     
