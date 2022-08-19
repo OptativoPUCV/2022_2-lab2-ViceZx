@@ -559,3 +559,16 @@ Fri 19 Aug 2022 03:36:28 PM UTC:
  tests:  9|3
 total_score: 35/70
 e225038
+Fri 19 Aug 2022 03:43:24 PM UTC: 
+ list.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:74:8: error: ‘Node’ has no member named ‘tail’
+   74 |   nodo -> tail = nodo -> head;
+      |        ^~
+list.c:74:23: error: ‘Node’ has no member named ‘head’
+   74 |   nodo -> tail = nodo -> head;
+      |                       ^~
+Compilation failed
+fac2c66
