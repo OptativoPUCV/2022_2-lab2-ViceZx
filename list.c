@@ -37,12 +37,12 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-  list->head = 0;
+  list->current = list->head;
 }
 
 
 void * nextList(List * list) {
-    list->current->next = 2;
+    list->current = list->next;
 }
 
 void * lastList(List * list) {
