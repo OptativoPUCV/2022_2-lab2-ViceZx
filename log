@@ -1038,3 +1038,21 @@ Sat 20 Aug 2022 03:14:39 AM UTC:
  tests:  10|2
 total_score: 45/70
 8c18798
+Sat 20 Aug 2022 03:20:45 AM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:125:28: error: ‘data’ undeclared (first use in this function)
+  125 |   Node * nodo = createNode(data);
+      |                            ^~~~
+list.c:125:28: note: each undeclared identifier is reported only once for each function it appears in
+list.c:125:10: error: unused variable ‘nodo’ [-Werror=unused-variable]
+  125 |   Node * nodo = createNode(data);
+      |          ^~~~
+list.c:127:1: error: control reaches end of non-void function [-Werror=return-type]
+  127 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+56f1b64

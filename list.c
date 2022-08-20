@@ -122,7 +122,8 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+  Node * nodo = createNode(data);
+  
 }
 
 void cleanList(List * list) {
