@@ -962,3 +962,13 @@ Sat 20 Aug 2022 03:02:14 AM UTC:
  tests:  10|2
 total_score: 45/70
 86c2445
+Sat 20 Aug 2022 03:02:27 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:91:23: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   91 |   nodo -> next = list -> next ;
+      |                       ^~
+Compilation failed
+d4b2027
