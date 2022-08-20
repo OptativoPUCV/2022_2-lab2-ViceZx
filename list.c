@@ -87,7 +87,7 @@ void pushCurrent(List * list, void * data) {
   Node * nodo = createNode(data);
   nodo -> prev = list -> current;
   list -> head -> next = nodo;
-  list -> tail -> prev = list -> tail;
+  nodo -> prev = list -> current;
   list -> tail = nodo;
   // if(L->tail == NULL || L->tail->data != j){
        // err_msg("tail deberia apuntar al nuevo nodo");
