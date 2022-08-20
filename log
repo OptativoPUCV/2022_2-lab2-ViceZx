@@ -863,3 +863,39 @@ Sat 20 Aug 2022 02:44:44 AM UTC:
  tests:  10|2
 total_score: 45/70
 3ab15a9
+Sat 20 Aug 2022 02:48:55 AM UTC: 
+ list.c | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:92:9: error: implicit declaration of function ‘err_msg’ [-Werror=implicit-function-declaration]
+   92 |         err_msg("tail deberia apuntar al nuevo nodo");
+      |         ^~~~~~~
+list.c:93:16: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   93 |         return 0;
+      |                ^
+In file included from test.c:5:
+list.c:85:6: note: declared here
+   85 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+In file included from test.c:5:
+list.c: At top level:
+list.c:96:5: error: expected identifier or ‘(’ before ‘if’
+   96 |     if(aux->next == NULL || aux->next!=L->tail){
+      |     ^~
+list.c:101:5: error: expected identifier or ‘(’ before ‘if’
+  101 |     if(L->tail->prev == NULL || L->tail->prev!=aux){
+      |     ^~
+list.c:107:1: error: expected identifier or ‘(’ before ‘}’ token
+  107 | }
+      | ^
+test.c:17:6: error: conflicting types for ‘err_msg’; have ‘void(char *)’ [-Werror]
+   17 | void err_msg(char* msg){
+      |      ^~~~~~~
+In file included from test.c:5:
+list.c:92:9: note: previous implicit declaration of ‘err_msg’ with type ‘void(char *)’
+   92 |         err_msg("tail deberia apuntar al nuevo nodo");
+      |         ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ba8d8e4
