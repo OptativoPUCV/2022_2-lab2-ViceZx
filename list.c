@@ -101,7 +101,7 @@ void pushCurrent(List * list, void * data) {
     //if(L->tail->prev == NULL || L->tail->prev!=aux){
        // err_msg("tail->prev deberia apuntar a aux");
       //  return 0;
-    }
+    //}
  
   
 }
