@@ -899,3 +899,12 @@ list.c:92:9: note: previous implicit declaration of ‘err_msg’ with type ‘v
 cc1: all warnings being treated as errors
 Compilation failed
 ba8d8e4
+Sat 20 Aug 2022 02:49:31 AM UTC: 
+ list.c | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+In file included from test.c:5:
+list.c:107:1: error: expected identifier or ‘(’ before ‘}’ token
+  107 | }
+      | ^
+Compilation failed
+2f1aeac
