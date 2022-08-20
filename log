@@ -1161,3 +1161,22 @@ list.c:128:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 8f15420
+Sat 20 Aug 2022 03:29:14 AM UTC: 
+ list.c | 2 --
+ 1 file changed, 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:125:17: error: passing argument 1 of ‘popFront’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  125 |   popFront(list -> head);
+      |            ~~~~~^~~~~~~
+      |                 |
+      |                 Node *
+list.c:114:24: note: expected ‘List *’ {aka ‘struct List *’} but argument is of type ‘Node *’
+  114 | void * popFront(List * list) {
+      |                 ~~~~~~~^~~~
+list.c:126:1: error: control reaches end of non-void function [-Werror=return-type]
+  126 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+12384c5
