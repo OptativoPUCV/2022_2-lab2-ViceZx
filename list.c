@@ -124,7 +124,7 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
   Node * eliminado = list -> head;
   list -> head = list -> head -> next;
-  popFront(eliminado);
+  popFront(list -> head);
   list -> size --;
 }
 
